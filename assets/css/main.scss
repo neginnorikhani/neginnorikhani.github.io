@@ -7,3 +7,7 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+// مخفی کردن متن Powered by و فوتر اضافی
+.page__footer-copyright {
+  display: none !important;
+}
