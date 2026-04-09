@@ -141,6 +141,7 @@ author:
 
 # Site Footer
 footer:
+  disable_attribution: true
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-square-x-twitter"
