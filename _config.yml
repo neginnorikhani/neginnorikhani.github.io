@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "Italy, Milan"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Site Title"
+title                    : "Negin Norikhani"
 title_separator          : "-"
 subtitle                 : "Business Strategy & Transformation Student"
 name                     : "Negin Norikhani"
@@ -115,7 +115,7 @@ analytics:
 author:
   name             : "Negin Norikhani"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Management Engineering | Strategy & Transformation"
+  bio              : "Management Engineering, Business Strategy & Transformation"
   location         : "Italy, Milan"
   email            :
   # fediverse      : "@you@instance.social"  # used for fediverse:creator meta tag
