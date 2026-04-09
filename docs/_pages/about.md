@@ -1,7 +1,7 @@
 ---
 permalink: /about/
-title: "About"
-excerpt: "Minimal Mistakes is a flexible two-column Jekyll theme."
+title: "About Me"
+excerpt: "Bridging Logic & Strategy"
 layouts_gallery:
   - url: /assets/images/mm-layout-splash.png
     image_path: /assets/images/mm-layout-splash.png
@@ -16,8 +16,11 @@ last_modified_at: 2022-05-27T11:59:26-04:00
 toc: true
 ---
 
-Minimal Mistakes is a flexible two-column Jekyll theme. Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server. As the name implies --- styling is purposely minimalistic to be enhanced and customized by you :smile:.
+I am a Management Engineering student at Politecnico di Milano, dedicated to exploring the intersection of rigorous analytical thinking and future-ready business strategies.
 
+With a solid background in Applied Mathematics, I developed a natural inclination for solving complex problems. Today, my focus has shifted from pure equations to the dynamic world of Business Strategy & Transformation. I am passionate about understanding how organizations evolve, how systems can be optimized, and how a well-defined strategy can turn a visionary idea into a market reality.
+
+Living and studying in Milan, one of Europe’s most vibrant business hubs, has further fueled my interest in how traditional industries undergo digital and strategic shifts. I see myself as a bridge-builder: someone who can look at a complex system, identify the gaps, and roadmap a path toward sustainable growth.
 {% include gallery id="layouts_gallery" caption="Examples of included layouts `splash`, `single`, and `archive`." %}
 
 [Install the Theme]({{ "/docs/quick-start-guide/" | relative_url }}){: .btn .btn--success .btn--large}
