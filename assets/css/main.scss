@@ -11,3 +11,10 @@ search: false
 .page__footer-copyright {
   display: none !important;
 }
+// مخفی کردن آیکون نارنجی فید
+.social-icons .fa-rss-square, 
+.social-icons .fa-rss,
+footer .fa-rss,
+.footer__subscribe {
+  display: none !important;
+}
