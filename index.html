@@ -6,58 +6,69 @@ layout: null
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Negin Norikhani | Management Engineer</title>
+    <title>Negin Norikhani | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body, html { margin: 0; padding: 0; font-family: 'Inter', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+        body, html { margin: 0; padding: 0; font-family: 'Helvetica', sans-serif; scroll-behavior: smooth; background: #fff; }
         
-        /* خط تایم لاین سراسری */
+        /* خط تایم‌لاین ثابت */
         .timeline-line {
             position: fixed;
-            left: 10%;
+            left: 80px;
             top: 0;
-            width: 4px;
+            width: 3px;
             height: 100%;
             background: #000;
-            z-index: 10;
+            z-index: 100;
         }
 
-        section { min-height: 100vh; display: flex; position: relative; }
+        section { min-height: 100vh; display: flex; position: relative; overflow: hidden; border-bottom: 2px solid #000; }
 
-        /* بخش اول: Home */
-        #home { background: #fff; }
-        .left-col { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-left: 5%; }
-        .right-col { flex: 1; background: #9da0a2; display: flex; flex-direction: column; justify-content: center; padding: 0 8%; color: #222; }
+        /* بخش سفید سمت چپ در هدر */
+        .intro-left { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-left: 100px; background: #fff; }
+        .intro-right { flex: 1.2; background: #9da0a2; display: flex; flex-direction: column; justify-content: center; padding: 0 5%; color: #000; }
 
-        .profile-img { width: 320px; border-radius: 4px; margin-bottom: 20px; z-index: 11; position: relative; background: #fff; padding: 10px; border: 2px solid #000; }
-        
-        /* دکمه‌ها */
-        .btn-black { background: #333; color: #fff; padding: 12px 30px; text-decoration: none; border-radius: 2px; font-weight: bold; margin: 10px 5px; display: inline-block; transition: 0.3s; border: none; cursor: pointer; }
-        .btn-black:hover { background: #000; transform: translateY(-2px); }
+        /* اصلاح نمایش عکس پروفایل */
+        .profile-container { width: 300px; height: 200px; border: 2px solid #000; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 20px; }
+        .profile-container img { width: 100%; height: auto; display: block; }
 
-        /* بخش‌های Resume و Portfolio */
-        .content-section { background: #9da0a2; padding-left: 15%; width: 100%; display: flex; align-items: center; }
-        .sideways-title {
+        .btn-black { background: #333; color: #fff !important; padding: 10px 25px; text-decoration: none; border-radius: 2px; font-weight: bold; margin: 5px; display: inline-block; transition: 0.3s; font-size: 0.9rem; }
+        .btn-black:hover { background: #000; }
+
+        /* استایل تیترهای عمودی - اصلاح شده */
+        .vertical-title {
             position: absolute;
-            left: 2%;
+            left: 0;
+            top: 0;
+            width: 80px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            z-index: 101;
+        }
+        .vertical-title h2 {
             transform: rotate(-90deg);
+            white-space: nowrap;
             font-size: 3rem;
             font-weight: 900;
             letter-spacing: 15px;
-            color: #000;
-            text-transform: uppercase;
+            margin: 0;
         }
 
-        #resume { background: #9da0a2; border-top: 2px solid #000; }
-        #portfolio { background: #9da0a2; border-top: 2px solid #000; }
+        .content-area { flex: 1; background: #9da0a2; margin-left: 80px; padding: 60px 10%; display: flex; align-items: center; }
+        .info-card { background: rgba(255,255,255,0.15); padding: 40px; border-radius: 10px; width: 100%; }
 
-        .resume-box { background: rgba(255,255,255,0.1); padding: 40px; border-radius: 8px; width: 70%; }
+        h1 { font-size: 4rem; margin: 0 0 20px 0; }
+        h3 { border-bottom: 1.5px solid #000; padding-bottom: 10px; margin-top: 0; }
 
         @media (max-width: 768px) {
-            .timeline-line { left: 5%; }
+            .timeline-line { display: none; }
             section { flex-direction: column; }
-            .sideways-title { position: static; transform: none; font-size: 2rem; margin-bottom: 20px; letter-spacing: 5px; }
-            .content-section { padding-left: 10%; }
+            .intro-left, .content-area { padding: 40px 20px; margin-left: 0; }
+            .vertical-title { position: static; width: 100%; height: auto; padding: 20px 0; }
+            .vertical-title h2 { transform: none; letter-spacing: 5px; }
         }
     </style>
 </head>
@@ -66,25 +77,25 @@ layout: null
     <div class="timeline-line"></div>
 
     <section id="home">
-        <div class="left-col">
-            <img src="{{ '/assets/images/negin-profile.jpg' | relative_url }}" alt="Negin" class="profile-img">
-            <h2 style="text-align: center; font-size: 2rem; margin-bottom: 0;">Negin Norikhani</h2>
-            <p style="text-align: center; color: #555; margin-top: 5px;">management engineer</p>
-            <p style="text-align: center; font-size: 0.9rem; color: #777;">business strategy and transformation</p>
-            
+        <div class="intro-left">
+            <div class="profile-container">
+                <img src="assets/images/negin-profile.png" alt="Negin Norikhani">
+            </div>
+            <h2 style="margin: 0;">Negin Norikhani</h2>
+            <p style="margin: 5px 0; color: #555;">management engineer</p>
+            <p style="font-size: 0.8rem; color: #888; margin-bottom: 20px;">business strategy and transformation</p>
             <a href="mailto:your-email@polimi.it" class="btn-black">Email me</a>
-            
-            <div style="font-size: 1.5rem; margin-top: 20px;">
-                <a href="https://www.linkedin.com/in/negin-norikhani-24b1b0225" style="color:#000;"><i class="fab fa-linkedin"></i></a>
+            <div style="margin-top: 15px; font-size: 1.5rem;">
+                <a href="https://linkedin.com/in/negin-norikhani-24b1b0225" style="color: #000;"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
-        <div class="right-col">
-            <h1 style="font-size: 4rem; margin-bottom: 10px;">About Me</h1>
-            <p style="line-height: 1.8; font-size: 1.1rem; text-align: justify;">
+        <div class="intro-right">
+            <h1>About Me</h1>
+            <p style="line-height: 1.6; font-size: 1.1rem;">
                 I am a <strong>Management Engineering student at Politecnico di Milano</strong>, dedicated to exploring the intersection of rigorous analytical thinking and future-ready business strategies. 
                 With a solid background in Applied Mathematics, I focus on transforming complex data into strategic growth.
             </p>
-            <div>
+            <div style="margin-top: 20px;">
                 <a href="#resume" class="btn-black">Resume</a>
                 <a href="#portfolio" class="btn-black">Portfolio</a>
             </div>
@@ -92,22 +103,22 @@ layout: null
     </section>
 
     <section id="resume">
-        <div class="sideways-title">RESUME</div>
-        <div class="content-section">
-            <div class="resume-box">
-                <h2 style="border-bottom: 2px solid #000; padding-bottom: 10px;">Education</h2>
+        <div class="vertical-title"><h2>RESUME</h2></div>
+        <div class="content-area">
+            <div class="info-card">
+                <h3>Education</h3>
                 <p><strong>Politecnico di Milano</strong><br>MSc in Management Engineering (Business Strategy & Transformation)<br>2025 - Present</p>
-                </div>
+            </div>
         </div>
     </section>
 
     <section id="portfolio">
-        <div class="sideways-title">PORTFOLIO</div>
-        <div class="content-section">
-            <div class="resume-box">
-                <h2 style="border-bottom: 2px solid #000; padding-bottom: 10px;">Projects</h2>
+        <div class="vertical-title"><h2>PORTFOLIO</h2></div>
+        <div class="content-area">
+            <div class="info-card">
+                <h3>Projects</h3>
                 <p>Strategic Roadmap - Miro Analysis</p>
-                <img src="{{ '/assets/images/roadmap.png' | relative_url }}" style="width: 100%; border-radius: 5px;">
+                <img src="assets/images/roadmap.png" style="width: 100%; border-radius: 4px; border: 1px solid #000;">
             </div>
         </div>
     </section>
