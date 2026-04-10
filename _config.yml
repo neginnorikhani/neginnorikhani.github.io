@@ -116,7 +116,7 @@ author:
   #name             : "Negin Norikhani"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   #bio              : "Management Engineering | Business Strategy & Transformation"
-  location         : "Italy, Milan"
+  #location         : "Italy, Milan"
   email            :
   # fediverse      : "@you@instance.social"  # used for fediverse:creator meta tag
   links:
