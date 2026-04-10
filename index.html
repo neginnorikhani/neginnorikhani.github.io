@@ -1,114 +1,116 @@
 ---
-layout: home
-author_profile: false
+layout: null
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negin Norikhani | Management Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body, html { margin: 0; padding: 0; font-family: 'Inter', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+        
+        /* خط تایم لاین سراسری */
+        .timeline-line {
+            position: fixed;
+            left: 10%;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: #000;
+            z-index: 10;
+        }
 
-<style>
-  /* تنظیمات کلی برای حذف حاشیه‌های اضافی تم */
-  .page__content { padding: 0 !important; max-width: 100% !important; }
-  .archive { margin-top: 0 !important; }
+        section { min-height: 100vh; display: flex; position: relative; }
 
-  .split-container {
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 80vh;
-    font-family: "Inter", sans-serif;
-  }
+        /* بخش اول: Home */
+        #home { background: #fff; }
+        .left-col { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-left: 5%; }
+        .right-col { flex: 1; background: #9da0a2; display: flex; flex-direction: column; justify-content: center; padding: 0 8%; color: #222; }
 
-  /* ستون چپ - سفید */
-  .left-column {
-    flex: 1;
-    background: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    min-width: 350px;
-  }
+        .profile-img { width: 320px; border-radius: 4px; margin-bottom: 20px; z-index: 11; position: relative; background: #fff; padding: 10px; border: 2px solid #000; }
+        
+        /* دکمه‌ها */
+        .btn-black { background: #333; color: #fff; padding: 12px 30px; text-decoration: none; border-radius: 2px; font-weight: bold; margin: 10px 5px; display: inline-block; transition: 0.3s; border: none; cursor: pointer; }
+        .btn-black:hover { background: #000; transform: translateY(-2px); }
 
-  /* ستون راست - طوسی */
-  .right-column {
-    flex: 1;
-    background: #a3a3a3; /* رنگ طوسی مشابه طرح */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 60px;
-    color: #333;
-    min-width: 350px;
-  }
+        /* بخش‌های Resume و Portfolio */
+        .content-section { background: #9da0a2; padding-left: 15%; width: 100%; display: flex; align-items: center; }
+        .sideways-title {
+            position: absolute;
+            left: 2%;
+            transform: rotate(-90deg);
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: 15px;
+            color: #000;
+            text-transform: uppercase;
+        }
 
-  .profile-img {
-    width: 300px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-  }
+        #resume { background: #9da0a2; border-top: 2px solid #000; }
+        #portfolio { background: #9da0a2; border-top: 2px solid #000; }
 
-  .name-title { text-align: center; margin-bottom: 20px; }
-  .name-title h2 { margin: 0; font-size: 2.2em; font-weight: 800; color: #000; line-height: 1.1; }
-  .name-title p { margin: 5px 0; font-size: 1.2em; color: #555; text-transform: lowercase; }
+        .resume-box { background: rgba(255,255,255,0.1); padding: 40px; border-radius: 8px; width: 70%; }
 
-  .btn-black {
-    background: #333;
-    color: white !important;
-    padding: 12px 40px;
-    text-decoration: none !important;
-    border-radius: 4px;
-    font-weight: bold;
-    display: inline-block;
-    margin: 10px 5px;
-    transition: 0.3s;
-  }
-  .btn-black:hover { background: #000; }
+        @media (max-width: 768px) {
+            .timeline-line { left: 5%; }
+            section { flex-direction: column; }
+            .sideways-title { position: static; transform: none; font-size: 2rem; margin-bottom: 20px; letter-spacing: 5px; }
+            .content-section { padding-left: 10%; }
+        }
+    </style>
+</head>
+<body>
 
-  .social-icons-row { margin-top: 25px; display: flex; gap: 15px; font-size: 1.5em; }
-  .social-icons-row a { color: #000; transition: 0.3s; }
-  .social-icons-row a:hover { color: #0077b5; }
+    <div class="timeline-line"></div>
 
-  .right-column h1 { font-size: 3.5em; font-weight: 800; margin-bottom: 20px; color: #222; }
-  .right-column p { line-height: 1.8; font-size: 1.1em; margin-bottom: 30px; text-align: justify; }
+    <section id="home">
+        <div class="left-col">
+            <img src="{{ '/assets/images/negin-profile.jpg' | relative_url }}" alt="Negin" class="profile-img">
+            <h2 style="text-align: center; font-size: 2rem; margin-bottom: 0;">Negin Norikhani</h2>
+            <p style="text-align: center; color: #555; margin-top: 5px;">management engineer</p>
+            <p style="text-align: center; font-size: 0.9rem; color: #777;">business strategy and transformation</p>
+            
+            <a href="mailto:your-email@polimi.it" class="btn-black">Email me</a>
+            
+            <div style="font-size: 1.5rem; margin-top: 20px;">
+                <a href="https://www.linkedin.com/in/negin-norikhani-24b1b0225" style="color:#000;"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="right-col">
+            <h1 style="font-size: 4rem; margin-bottom: 10px;">About Me</h1>
+            <p style="line-height: 1.8; font-size: 1.1rem; text-align: justify;">
+                I am a <strong>Management Engineering student at Politecnico di Milano</strong>, dedicated to exploring the intersection of rigorous analytical thinking and future-ready business strategies. 
+                With a solid background in Applied Mathematics, I focus on transforming complex data into strategic growth.
+            </p>
+            <div>
+                <a href="#resume" class="btn-black">Resume</a>
+                <a href="#portfolio" class="btn-black">Portfolio</a>
+            </div>
+        </div>
+    </section>
 
-  @media (max-width: 768px) {
-    .split-container { flex-direction: column; }
-    .right-column { padding: 40px 20px; }
-  }
-</style>
+    <section id="resume">
+        <div class="sideways-title">RESUME</div>
+        <div class="content-section">
+            <div class="resume-box">
+                <h2 style="border-bottom: 2px solid #000; padding-bottom: 10px;">Education</h2>
+                <p><strong>Politecnico di Milano</strong><br>MSc in Management Engineering (Business Strategy & Transformation)<br>2025 - Present</p>
+                </div>
+        </div>
+    </section>
 
-<div class="split-container">
-  <div class="left-column">
-    <img src="{{ '/assets/images/negin-profile.jpg' | relative_url }}" alt="Negin Norikhani" class="profile-img">
-    
-    <div class="name-title">
-      <h2>Negin Norikhani<br>management engineer</h2>
-      <p>business strategy and transformation</p>
-    </div>
+    <section id="portfolio">
+        <div class="sideways-title">PORTFOLIO</div>
+        <div class="content-section">
+            <div class="resume-box">
+                <h2 style="border-bottom: 2px solid #000; padding-bottom: 10px;">Projects</h2>
+                <p>Strategic Roadmap - Miro Analysis</p>
+                <img src="{{ '/assets/images/roadmap.png' | relative_url }}" style="width: 100%; border-radius: 5px;">
+            </div>
+        </div>
+    </section>
 
-    <a href="mailto:your-email@example.com" class="btn-black">Email me</a>
-
-    <div class="social-icons-row">
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.linkedin.com/in/negin-norikhani-24b1b0225"><i class="fab fa-linkedin"></i></a>
-    </div>
-  </div>
-
-  <div class="right-column">
-    <h1>About Me</h1>
-    <p>
-      I am a <strong>Management Engineering student at Politecnico di Milano</strong>, 
-      dedicated to exploring the intersection of rigorous analytical thinking and 
-      future-ready business strategies.
-      <br><br>
-      With a solid background in Applied Mathematics, I developed a natural 
-      inclination for solving problems. Today, my focus has shifted toward 
-      <strong>Business Strategy & Transformation</strong>.
-    </p>
-
-    <div class="button-group">
-      <a href="#" class="btn-black">Resume</a>
-      <a href="#" class="btn-black">Portfolio</a>
-    </div>
-  </div>
-</div>
+</body>
+</html>
