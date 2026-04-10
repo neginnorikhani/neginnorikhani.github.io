@@ -113,7 +113,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Negin Norikhani"
+  #name             : "Negin Norikhani"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Management Engineering | Business Strategy & Transformation"
   location         : "Italy, Milan"
