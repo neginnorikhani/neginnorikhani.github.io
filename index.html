@@ -10,65 +10,30 @@ layout: null
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body, html { margin: 0; padding: 0; font-family: 'Helvetica', sans-serif; scroll-behavior: smooth; background: #fff; }
-        
-        /* خط تایم‌لاین ثابت */
-        .timeline-line {
-            position: fixed;
-            left: 80px;
-            top: 0;
-            width: 3px;
-            height: 100%;
-            background: #000;
-            z-index: 100;
-        }
-
+        .timeline-line { position: fixed; left: 80px; top: 0; width: 3px; height: 100%; background: #000; z-index: 100; }
         section { min-height: 100vh; display: flex; position: relative; overflow: hidden; border-bottom: 2px solid #000; }
-
-        /* بخش سفید سمت چپ در هدر */
         .intro-left { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-left: 100px; background: #fff; }
         .intro-right { flex: 1.2; background: #9da0a2; display: flex; flex-direction: column; justify-content: center; padding: 0 5%; color: #000; }
-
-        /* اصلاح نمایش عکس پروفایل */
-        .profile-container { width: 300px; height: 200px; border: 2px solid #000; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 20px; }
+        .profile-container { width: 300px; height: 200px; border: 2px solid #000; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 20px; background: #fff; }
         .profile-container img { width: 100%; height: auto; display: block; }
-
-        .btn-black { background: #333; color: #fff !important; padding: 10px 25px; text-decoration: none; border-radius: 2px; font-weight: bold; margin: 5px; display: inline-block; transition: 0.3s; font-size: 0.9rem; }
+        .btn-black { background: #333; color: #fff !important; padding: 10px 25px; text-decoration: none; border-radius: 2px; font-weight: bold; margin: 5px; display: inline-block; transition: 0.3s; font-size: 0.9rem; border: none; cursor: pointer; }
         .btn-black:hover { background: #000; }
-
-        /* استایل تیترهای عمودی - اصلاح شده */
-        .vertical-title {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 80px;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #fff;
-            z-index: 101;
-        }
-        .vertical-title h2 {
-            transform: rotate(-90deg);
-            white-space: nowrap;
-            font-size: 3rem;
-            font-weight: 900;
-            letter-spacing: 15px;
-            margin: 0;
-        }
-
+        .vertical-title { position: absolute; left: 0; top: 0; width: 80px; height: 100%; display: flex; align-items: center; justify-content: center; background: #fff; z-index: 101; }
+        .vertical-title h2 { transform: rotate(-90deg); white-space: nowrap; font-size: 3rem; font-weight: 900; letter-spacing: 15px; margin: 0; }
         .content-area { flex: 1; background: #9da0a2; margin-left: 80px; padding: 60px 10%; display: flex; align-items: center; }
         .info-card { background: rgba(255,255,255,0.15); padding: 40px; border-radius: 10px; width: 100%; }
-
         h1 { font-size: 4rem; margin: 0 0 20px 0; }
-        h3 { border-bottom: 1.5px solid #000; padding-bottom: 10px; margin-top: 0; }
-
+        h3 { border-bottom: 1.5px solid #000; padding-bottom: 10px; margin-top: 30px; margin-bottom: 20px; }
+        h3:first-child { margin-top: 0; }
+        ul { margin-top: 10px; padding-left: 20px; line-height: 1.6; font-size: 0.95rem; }
+        .date-float { float: right; font-weight: normal; color: #222; }
         @media (max-width: 768px) {
             .timeline-line { display: none; }
             section { flex-direction: column; }
             .intro-left, .content-area { padding: 40px 20px; margin-left: 0; }
             .vertical-title { position: static; width: 100%; height: auto; padding: 20px 0; }
             .vertical-title h2 { transform: none; letter-spacing: 5px; }
+            .date-float { float: none; display: block; margin-top: 5px; }
         }
     </style>
 </head>
@@ -86,7 +51,7 @@ layout: null
             <p style="font-size: 0.8rem; color: #888; margin-bottom: 20px;">business strategy and transformation</p>
             <a href="mailto:your-email@polimi.it" class="btn-black">Email me</a>
             <div style="margin-top: 15px; font-size: 1.5rem;">
-                <a href="https://linkedin.com/in/negin-norikhani-24b1b0225" style="color: #000;"><i class="fab fa-linkedin"></i></a>
+                <a href="https://linkedin.com/in/negin-norikhani-24b1b0225" target="_blank" style="color: #000;"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
         <div class="intro-right">
@@ -107,59 +72,43 @@ layout: null
         <div class="content-area">
             <div class="info-card">
                 
-                <div style="margin-bottom: 40px;">
-                    <h3 style="border-bottom: 1.5px solid #000; padding-bottom: 10px; margin-top: 0;">Experience</h3>
-                    <p style="margin-bottom: 5px;"><strong>Emertat Farabar</strong> | Tehran, Iran</p>
-                    <p style="margin-top: 0; color: #333;">CEO Assistant (Consultant and Secretary) <span style="float: right;">2023 - 2025</span></p>
-                    
-                    <ul style="margin-top: 10px; padding-left: 20px; line-height: 1.6; font-size: 0.95rem;">
-                        <li><strong>Key Responsibilities:</strong> Strategic Consulting, Project Management, and Marketing.</li>
-                        <li>Handled operational coordination, administrative support, and high-level meeting management.</li>
+                <h3>Education</h3>
+                <div style="margin-bottom: 25px;">
+                    <p style="margin-bottom: 5px;"><strong>Politecnico di Milano</strong> | Milan, Italy <span class="date-float">2025 - Present</span></p>
+                    <p style="margin: 0; font-size: 0.95rem;">MSc in Management Engineering (Business Strategy & Transformation)</p>
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <p style="margin-bottom: 5px;"><strong>Iran University of Science & Technology (IUST)</strong> | Tehran, Iran <span class="date-float">2019 - 2023</span></p>
+                    <p style="margin: 0; font-size: 0.95rem;">B.Sc. in Applied Mathematics</p>
+                    <ul>
+                        <li>Overall GPA: <strong>3.52/4.0</strong> (17.16/20.0) | Ranked <strong>Second</strong> in class [cite: 4, 5]</li>
+                        <li><strong>Selected Courses:</strong> Numerical Analysis (20), Data Mining (19), Mathematical Modeling (19), Applied Theory (19)</li>
                     </ul>
                 </div>
 
-                <div>
-                    <h3 style="border-bottom: 1.5px solid #000; padding-bottom: 10px; margin-top: 0;">Education</h3>
-                    
-                    <div style="margin-bottom: 30px;">
-                        <p style="margin-bottom: 5px;"><strong>Politecnico di Milano</strong> | Milan, Italy</p>
-                        <p style="margin-top: 0; color: #333;">MSc in Management Engineering (Business Strategy & Transformation) <span style="float: right;">2025 - Present</span></p>
-                    </div>
+                <h3>Certifications</h3>
+                <div style="margin-bottom: 10px;">
+                    <p style="margin-bottom: 5px;">
+                        <strong>Virtual Internship Certificate - UPKEY</strong>
+                        <a href="docs/upkey-cert.pdf" target="_blank" style="text-decoration: none; color: #0077b5; margin-left: 10px; font-size: 0.85rem;">
+                            <i class="fas fa-external-link-alt"></i> View PDF
+                        </a>
+                        <span class="date-float">Oct 2021</span>
+                    </p>
+                    <ul>
+                        <li>Focus: Managerial functions of leadership, Finance, Marketing, and Entrepreneurship [cite: 5]</li>
+                    </ul>
+                </div>
 
-                    <div style="margin-bottom: 10px;">
-                        <p style="margin-bottom: 5px;"><strong>Iran University of Science & Technology (IUST)</strong> | Tehran, Iran</p>
-                        <p style="margin: 0; color: #333;">B.Sc. in Applied Mathematics <span style="float: right;">2019 - Sep 2023</span></p>
-                        
-                        <ul style="margin-top: 10px; padding-left: 20px; line-height: 1.6; font-size: 0.95rem;">
-                            <li>Overall GPA: <strong>3.52/4.0</strong> (17.16/20.0)</li>
-                            <li>Ranked <strong>Second</strong> in total GPA in class</li>
-                            <li><strong>Selected Courses:</strong> Numerical Analysis (20), Data Mining (19), Mathematical Modeling (19), Applied Theory (19), Linear Algebra (18), Advanced Programming (18.75)</li>
-                        </ul>
-                    </div>
+                <h3>Experience</h3>
+                <div style="margin-bottom: 10px;">
+                    <p style="margin-bottom: 5px;"><strong>Emertat Farabar</strong> | Tehran, Iran <span class="date-float">2023 - 2025</span></p>
+                    <p style="margin: 0; font-size: 0.95rem;">CEO Assistant (Consultant and Secretary)</p>
+                    <ul>
+                        <li>Strategic Consulting, Project Management, Marketing, and Operational Coordination</li>
+                    </ul>
                 </div>
-              <div style="margin-top: 40px;">
-                    <h3 style="border-bottom: 1.5px solid #000; padding-bottom: 10px; margin-top: 0;">Certifications</h3>
-                    <div style="margin-bottom: 15px;">
-                        <p style="margin-bottom: 5px;"><strong>Certificate on UPKEY</strong></p>
-                        <ul style="margin-top: 5px; padding-left: 20px; line-height: 1.6; font-size: 0.95rem;">
-                            <li>Focus: <strong>Managerial functions of leadership, Finance, Marketing, and Entrepreneurship</strong></li>
-                        </ul>
-                    </div>
-                </div>
-              <div style="margin-top: 40px;">
-    <h3 style="border-bottom: 1.5px solid #000; padding-bottom: 10px; margin-top: 0;">Certifications</h3>
-    <div style="margin-bottom: 15px;">
-        <p style="margin-bottom: 5px;">
-            <strong>Certificate on UPKEY</strong> 
-            <a href="{{ '/assets/upkey-cert.pdf' | relative_url }}" target="_blank" style="text-decoration: none; color: #0077b5; margin-left: 10px; font-size: 0.8rem;">
-                <i class="fas fa-external-link-alt"></i> View PDF
-            </a>
-        </p>
-        <ul style="margin-top: 5px; padding-left: 20px; line-height: 1.6; font-size: 0.95rem;">
-            <li>Focus: <strong>Managerial functions of leadership, Finance, Marketing, and Entrepreneurship</strong></li>
-        </ul>
-    </div>
-</div>
 
             </div>
         </div>
@@ -168,10 +117,10 @@ layout: null
     <section id="portfolio">
         <div class="vertical-title"><h2>PORTFOLIO</h2></div>
         <div class="content-area">
-            <div class="info-card" style="text-align: center; padding: 60px 20px; border: 2px dashed #000; background: rgba(255,255,255,0.05);">
+            <div class="info-card" style="text-align: center; border: 2px dashed #000; background: rgba(255,255,255,0.05);">
                 <i class="fas fa-folder-open" style="font-size: 3rem; margin-bottom: 20px; color: #555;"></i>
                 <h3>Projects Coming Soon</h3>
-                <p style="color: #444;">I'm currently working on strategic management and digital transformation projects at Polimi. Stay tuned!</p>
+                <p>Strategic management and digital transformation projects are in progress.</p>
             </div>
         </div>
     </section>
