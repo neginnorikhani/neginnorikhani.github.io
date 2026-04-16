@@ -137,20 +137,19 @@ layout: null
             <div class="info-card">
                 <h3 style="border-bottom: 1.5px solid #000; padding-bottom: 10px; margin-top: 0;">Selected Projects</h3>
 
-                <div style="border: 1px solid #000; padding: 20px; border-radius: 5px; background: #fff; margin-top: 20px; transition: 0.3s;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-                        <div>
+                <div style="border: 1px solid #000; padding: 25px; border-radius: 5px; background: #fff; margin-top: 20px; position: relative;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                        <div style="flex: 1; min-width: 250px;">
                             <h4 style="margin: 0; font-size: 1.4rem;">Sentique: Scientific Personalization</h4>
                             <p style="margin: 5px 0 0 0; color: #555; font-size: 0.9rem;">Strategy & Marketing | <strong>L'Oréal Paris</strong></p>
                         </div>
-                        <button onclick="toggleProject('sentique-details')" style="background: none; border: 1px solid #000; padding: 8px 15px; cursor: pointer; font-size: 0.8rem; font-weight: bold; display: flex; align-items: center; gap: 8px;">
+                        <button onclick="toggleProject('sentique-details')" style="background: none; border: 1px solid #000; padding: 8px 18px; cursor: pointer; font-size: 0.8rem; font-weight: bold; display: flex; align-items: center; gap: 8px; white-space: nowrap;">
                             <i class="fas fa-plus" id="icon-sentique-details"></i> VIEW CASE STUDY
                         </button>
                     </div>
 
                     <div id="sentique-details" style="display: none; margin-top: 25px; border-top: 1px dashed #ccc; padding-top: 20px;">
-                        
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px;">
                             <div>
                                 <h5 style="margin-top: 0;"><i class="fas fa-exclamation-triangle"></i> The Problem</h5>
                                 <p style="font-size: 0.85rem; line-height: 1.5; color: #444;">Biological variability in skin (pH, hydration) makes fragrances inconsistent. Sentique solves this market gap in luxury personalization.</p>
@@ -159,34 +158,30 @@ layout: null
                                 <h5 style="margin-top: 0;"><i class="fas fa-lightbulb"></i> The Disruptive Idea</h5>
                                 <p style="font-size: 0.85rem; line-height: 1.5; color: #444;">An in-store "Laboratory Experience" using sensors and AI to create scents matched to objective skin chemistry.</p>
                             </div>
-                            <div>
+                            <div style="grid-column: 1 / -1;">
                                 <h5 style="margin-top: 0;"><i class="fas fa-chart-line"></i> Strategic Impact</h5>
                                 <p style="font-size: 0.85rem; line-height: 1.5; color: #444;">Justified premium pricing (€150-€250) and built loyalty through data-driven personal formula profiles.</p>
                             </div>
                         </div>
-                      <div style="margin-top: 20px; text-align: right;">
-    <a href="assets/docs/sentique-full-report.pdf" target="_blank" style="text-decoration: none; color: #000; border: 1px solid #000; padding: 10px 20px; font-size: 0.8rem; font-weight: bold; transition: 0.3s;">
-        <i class="fas fa-file-pdf"></i> VIEW FULL STRATEGIC REPORT
-    </a>
-</div>
-                      
-                        <div style="margin-top: 20px; padding: 10px; background: #f9f9f9; border-left: 3px solid #000; font-style: italic; font-size: 0.9rem;">
+
+                        <div style="margin-top: 30px; text-align: center; border-top: 1px solid #eee; padding-top: 20px;">
+                            <a href="{{ '/assets/sentique-strategy.pdf' | relative_url }}" target="_blank" style="text-decoration: none; color: #000; border: 1.5px solid #000; padding: 12px 25px; font-size: 0.85rem; font-weight: bold; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s;">
+                                <i class="fas fa-file-pdf"></i> VIEW FULL STRATEGIC REPORT
+                            </a>
+                        </div>
+
+                        <div style="margin-top: 25px; padding: 15px; background: #f9f9f9; border-left: 4px solid #000; font-style: italic; font-size: 0.9rem;">
                             "Moving from subjective preferences to scientific validation in luxury retail."
                         </div>
                     </div>
                 </div>
 
-                <div style="margin-top: 20px; text-align: center; padding: 20px; border: 1px dashed #555; color: #555; font-size: 0.9rem;">
+                <div style="margin-top: 30px; text-align: center; padding: 40px; border: 1px dashed #555; color: #555; font-size: 0.9rem; border-radius: 5px;">
                     <i class="fas fa-plus-circle"></i> More projects coming soon...
                 </div>
 
             </div>
         </div>
-     <div style="margin-top: 25px; text-align: center;">
-    <a href="{{ '/assets/sentique-strategy.pdf' | relative_url }}" target="_blank" style="text-decoration: none; color: #000; border: 1px solid #000; padding: 10px 25px; font-size: 0.85rem; font-weight: bold; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s;">
-        <i class="fas fa-file-pdf"></i> View Full Strategic Report
-    </a>
-</div>
     </section>
 
     <script>
